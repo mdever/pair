@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root :to=>"pages#home"
   resources :posts, :except => [ :edit, :update ]
   
+  get 'users/:id' => 'users#show',  :as => 'user'
+
   get 'about'   => 'pages#about',   :as => 'about'
   get 'contact' => 'pages#contact', :as => 'contact'
 
