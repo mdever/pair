@@ -2,18 +2,26 @@
 <html>
 <head>
   <title>Pair</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true  %>
+  <%= stylesheet_link_tag    'http://yui.yahooapis.com/pure/0.5.0/base-min.css'            %>
+  <%= stylesheet_link_tag    'http://yui.yahooapis.com/pure/0.5.0/pure-min.css'            %>
+  <%= stylesheet_link_tag    'main.css.scss'                                               %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true                %>
+  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <div class="flash">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <div id="application">
+    <%=render "layouts/header" %>
+  
+    <div class="flash">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+  
+    <%= yield %>
+  
+    <%= render "layouts/footer" %>
   </div>
-
-<%= yield %>
-
 </body>
 </html>
