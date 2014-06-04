@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
   
   has_many :posts
 
+  attr_accessor :username
+  validates :username, :presence => :true, :length => { maximum: 40, minimum: 6 }
+  
+  before_save do
+    @username = @user.downcase if @user
+  end
 end

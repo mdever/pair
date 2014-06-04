@@ -1,0 +1,19 @@
+#application {
+  position: relative;
+  width: 75%;
+  margin: auto;
+}
+
+#top-bar {
+  border: 1px solid black;
+  
+  nav ul {
+    margin: 1em 0;
+    right: 1.5em;
+  }
+}
+
+ul, ol, li {
+  display: inline;
+  margin-top: 10px;
+}

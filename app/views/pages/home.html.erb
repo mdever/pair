@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+<h1>Home</h1>
+<% if !user_signed_in? %>
+  <p><%= link_to "Sign in", new_user_session_path %> or <%= link_to "Sign up", new_user_registration_path %></p>
+<% else %>
+  <p>Welcome back, <% current_user.username %></p>
+<% end %>
