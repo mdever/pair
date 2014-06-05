@@ -6,14 +6,17 @@
 
 #top-bar {
   border: 1px solid black;
+  position: relative;
   
   nav ul {
+    position: absolute;
     margin: 1em 0;
     right: 1.5em;
+    bottom: 10px;
   }
 }
 
 ul, ol, li {
   display: inline;
-  margin-top: 10px;
+  top: 20px;
 }
