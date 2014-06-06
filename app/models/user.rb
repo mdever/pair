@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
   validates :username, :presence => :true, :length => { maximum: 40, minimum: 6 }
   
   before_save do
-    @username = @user.downcase if @user
+    @username = @username.downcase if @username
   end
 end
